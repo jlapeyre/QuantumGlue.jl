@@ -6,3 +6,9 @@
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/jlapeyre/QuantumGlue.jl?svg=true)](https://ci.appveyor.com/project/jlapeyre/QuantumGlue-jl)
 [![Codecov](https://codecov.io/gh/jlapeyre/QuantumGlue.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/jlapeyre/QuantumGlue.jl)
 [![Coveralls](https://coveralls.io/repos/github/jlapeyre/QuantumGlue.jl/badge.svg?branch=master)](https://coveralls.io/github/jlapeyre/QuantumGlue.jl?branch=master)
+
+
+`QuantumGlue` provides an interface between some features of distinct quantum science and engineering packages.
+
+This is an experiment. The package consists of methods that convert between `QuantumOptics.Ket` and `Yao.DefaultRegister` in the
+case that each represents a pure multi-qubit state via an array of coefficients of the computational basis vectors.

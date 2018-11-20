@@ -1,6 +1,14 @@
-using QuantumGlue
+import QuantumGlue
+
+import QuantumOptics
+const QO = QuantumOptics
+
+import Yao
 using Test
 
-@testset "QuantumGlue.jl" begin
-    # Write your own tests here.
+@testset "Convert multi-qubit states" begin
+    for f in (Yao.zero_state, Yao.rand_state)
+        s = f(3)
+        @test s |> QO.Ket |> Yao.register == s
+    end
 end
