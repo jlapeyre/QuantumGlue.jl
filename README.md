@@ -10,5 +10,5 @@
 
 `QuantumGlue` provides an interface between some features of distinct quantum science and engineering packages.
 
-This is an experiment. The package consists of methods that convert between `QuantumOptics.Ket` and `Yao.DefaultRegister` in the
-case that each represents a pure multi-qubit state via an array of coefficients of the computational basis vectors.
+This is an experiment. The package consists of methods that convert between [`QuantumOptics.Ket`](https://github.com/qojulia/QuantumOptics.jl)
+and [`Yao.DefaultRegister`](https://github.com/QuantumBFS/Yao.jl) in the case that each represents a pure multi-qubit state via an array of coefficients of the computational basis vectors.
