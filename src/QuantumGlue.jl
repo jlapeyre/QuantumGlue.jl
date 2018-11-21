@@ -28,14 +28,13 @@ function qubitbasis(n::Integer)
 end
 
 """
-    Ket(reg::Yao.DefaultRegister)
+    Ket(reg::Yao.AbstractRegister)
 
-Convert `reg` to a instance of type `QuantumOptics.Ket`. The data is not copied, but is
-shared between the input and output. The input is not checked.
-This method is an inverse of `register` acting on objects of type `QuantumOptics.Ket`.
+Convert `reg` to a instance of type `QuantumOptics.Ket`. The input is not checked.
+This method is an inverse of `register` acting on some objects of type `QuantumOptics.Ket`.
 """
-function QuantumOptics.Ket(reg::Yao.DefaultRegister)
-    return QuantumOptics.Ket(reg |> Yao.nqubits |> qubitbasis, reg.state[:,1])
+function QuantumOptics.Ket(reg::Yao.AbstractRegister)
+    return QuantumOptics.Ket(reg |> Yao.nqubits |> qubitbasis, reg |> Yao.state |> Yao.Intrinsics.matvec)
 end
 
 """
